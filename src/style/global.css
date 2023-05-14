@@ -1,0 +1,18 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+header{
+    width: 100vw;
+    height: 1vh;
+    
+  }
+  
+  header img {
+    margin-top: 15px;
+    margin-left: 50px;
+    height: 40px;
+  }

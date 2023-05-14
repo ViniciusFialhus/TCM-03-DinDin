@@ -1,0 +1,27 @@
+.containerForm{
+    display: flex;
+    flex-direction: column;
+
+    height: 100px;
+    width: 100%;
+    
+}
+
+.titleForm{ 
+    
+    margin-left: 25px;
+    margin-bottom: 5px;
+    
+    font-family: 'Rubik', sans-serif;
+    
+
+}
+
+input {
+    margin: 0 auto;
+    padding-left: 15px;
+    height: 35px;
+    width: 285px;
+    font-size: 20px;
+
+}
