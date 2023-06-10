@@ -21,8 +21,6 @@ import { useState, useEffect, useRef } from 'react'
 
 function LoggedPage(){
 
-  
-
   const perfilName = localStorage.getItem('LoginName')
   const navigate = useNavigate()
   const [modalSetRegister, setModalSetRegister] = useState(false)
@@ -33,7 +31,7 @@ function LoggedPage(){
   const [listTransation, setListTransation] = useState([])
   const [itemChoice, setItemChoice] = useState([])
   const [activeDeleteIndex, setActiveDeleteIndex] = useState(null);
-  const [extract, setExtract] = useState()
+  const [extract, setExtract] = useState({})
   const refValue = useRef(null)
    
 
@@ -107,11 +105,9 @@ function LoggedPage(){
     setModalDelete(true)
     setActiveDeleteIndex(index)
   }
-  const entrada = extract.entrada
-  const saida = extract.saida
-  console.log(entrada, saida)
-  const money = entrada - saida
-
+  
+  const money = extract && extract.entrada && extract.saida ? extract.entrada - extract.saida : 0;
+ 
   return(
     <>
      
