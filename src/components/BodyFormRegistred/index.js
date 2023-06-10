@@ -39,9 +39,11 @@ function BodyFormRegistred({title}){
             const {confirmarSenha, ...jsonData} = data
             const jsonResponse = JSON.stringify(jsonData)
             const response = RegistredUser(jsonResponse)
-            if(response){ 
-                navigate('/')
-            }
+            response.then(response => {
+                if(response){
+                    navigate('/')
+                }
+              })
         }
         
         
@@ -63,7 +65,7 @@ function BodyFormRegistred({title}){
 
     return(
     <div >
-        <header><img src={LogoDimDim}/></header>
+        <header><img src={LogoDimDim} alt='Logo'/></header>
         <div className='conteiner-formregistred'>
          
             <h1 className='titleregistred'>{title}</h1>

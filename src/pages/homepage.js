@@ -5,11 +5,12 @@ import LogoDimDim from '../assets/Logo.png'
 
 import { Link } from 'react-router-dom';
 
-function HomePage() {
+function HomePage() {  
+  
   return (
     
     <div className="HomePage">
-      <header><img src={LogoDimDim}/></header>
+      <header><img src={LogoDimDim} alt='logo'/></header>
 
       <div className='main-part'>
        <div className='text-part'>
@@ -22,7 +23,8 @@ function HomePage() {
         <div className='part-form'>
           <BodyFormLogin 
           title={'Login'}
-          to={'/Register'}>
+          to={'/Register'}
+          >
           </BodyFormLogin> 
         </div>
       </div>

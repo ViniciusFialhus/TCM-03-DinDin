@@ -1,6 +1,6 @@
 import '../BodyFormsLogin/style.css'
 import InputForms from '../InputForms/index';
-import { LoginUser } from '../../Api';
+import { LoginUser, getDataLoggedUser } from '../../Api';
 import {  useNavigate } from 'react-router-dom';
 import { useState, useRef } from 'react';
 
@@ -8,7 +8,7 @@ import { useState, useRef } from 'react';
 
 
 
-function BodyForm({title}){
+function BodyForm({title, onData}){
     const buttonRef = useRef(null)
     const navigate = useNavigate()
     
@@ -16,11 +16,11 @@ function BodyForm({title}){
         email: '',
         senha: ''
     }); 
+    
 
     const expressForm = (event) => {
         const value = event.target.value
         setForm({...form, [event.target.name]: value})
-
     };
 
  async function capturingLoginData(){
@@ -31,20 +31,21 @@ function BodyForm({title}){
         } else {     
            const response = await LoginUser(form)
            if(response !== undefined){
-           const {token, usuario} = response
-           const {nome, email, id} = usuario
+           const {usuario} = response
+           const {nome, email} = usuario
            if(form.email === email){
             navigate('/LoggedPage')
             localStorage.setItem('LoginName', `${nome}`)
-            return
-           } else {
-            return 
-           }
+                const token = localStorage.getItem('token')
+                const headers =  {headers: {Authorization: `Bearer ${token}` } }
+                const responseDataUser =  await getDataLoggedUser(headers)
+               
+           } 
         }
-            
     }     
  }
 
+ 
     
     return(
         <div className='conteiner-form'>

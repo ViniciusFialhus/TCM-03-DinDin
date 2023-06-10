@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useState } from "react"
+
 
 
 
@@ -12,14 +12,11 @@ const Api = axios.create({
 
  async function RegistredUser (form){
     try{
-    const registerUser = await Api.post("/usuario", form)   
-    const token = registerUser.data
-    const {nome, email, id, senha} = token
-    localStorage.setItem(`${senha}`, `${email}`)
-    localStorage.setItem(`${nome}`, `${email}`)
+    const registerUser = await Api.post("/usuario", form) 
+    console.log(registerUser)  
     return true
   } catch (error) { 
-      console.error('Erro ao enviar solicitação para a API:', error.response.data); 
+      console.error(error); 
       return false
     }
     
@@ -29,11 +26,11 @@ export async function LoginUser (form){
   try{ 
     const loginUser = await Api.post("/login", form)
     const { data } = loginUser
-    const {token, usuario } = data
+    const {token} = data
     localStorage.setItem('token', `${token}`)
     return loginUser.data
  } catch (error) {
-        console.error(error.response.data)
+        console.error(error)
     }
 }
 
@@ -42,18 +39,60 @@ export async function getCategory( headers){
   const getCategory = await Api.get('/categoria', headers)
   return getCategory.data
    } catch (error){
-    console.log(error.response.mensagem)
+    console.log(error)
  }
 }
 
-export async function postTransition(body, headers){
+export async function postTransition(data, headers){
   try{
-    const postTransition = await Api.post('/transacao', body, headers)
+    const postTransition = await Api.post('/transacao', data,  headers)
+    
     return postTransition.data
   } catch (error) {
-    console.log(error.response.data)
+    console.log(error)
   }
 } 
+
+export async function getDataLoggedUser(headers){
+  try{
+    const getDataLoggedUser = await Api.get('/transacao', headers)
+    
+    return getDataLoggedUser.data
+  } catch (error) { 
+    console.log(error)
+  }
+}   
+
+export async function deleteTransactionApi(id, headers ){
+  try{
+    const deleteTransaction = await Api.delete(`/transacao/${id}`, headers)
+
+    return deleteTransaction
+  } catch (error) { 
+    console.log(error)
+  }
+} 
+
+export async function  updatedTransationApi(id, data, headers ){
+  try{
+    const deleteTransaction = await Api.put(`/transacao/${id}`, data, headers)
+
+    return deleteTransaction
+  } catch (error) { 
+    console.log(error)
+  }
+} 
+
+export async function getExtract(headers){
+  try{
+    const getExtract = await Api.get(`/transacao/extrato`, headers )
+
+    return getExtract.data
+  } catch (error) { 
+    console.log(error)
+  }
+} 
+
 
 export default RegistredUser
 

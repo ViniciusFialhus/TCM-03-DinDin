@@ -1,0 +1,46 @@
+.poligon{
+    margin-top: 17px;
+}
+
+.containerDelete{
+    padding-top: 15px;
+    position: absolute;
+    z-index: 150;
+    left: 825px;
+    top: 37px;
+    height: 75px;
+    width: 150px;
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #E4F2FD;
+   
+
+}
+
+.containerChoise{
+    display: flex;
+    justify-content: space-evenly;
+
+
+    margin-top: 17px;
+   
+}
+
+.containerChoise div{
+    cursor: pointer;
+    height: 20px;
+    width: 45px;
+    color: white;
+    border-radius: 15px;
+    
+
+}
+
+.containerChoise .yes {
+    background-color: #3A9FF1;
+}
+
+.containerChoise .no {
+    background-color: #FF576B;
+}
