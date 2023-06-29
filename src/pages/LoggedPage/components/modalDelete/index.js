@@ -15,13 +15,14 @@ function ModalDelete({setModalDelete, listTransation, index}){
     const foundItem = secundaryArray[index]
     const token = localStorage.getItem('token');
     const headers = { headers: { Authorization: `Bearer ${token}` } };
-    const response = deleteTransactionApi(foundItem, headers)
+    await deleteTransactionApi(foundItem, headers)
+    window.location.reload()
     setModalDelete(false)
     }
 
     return(
     <>
-    <img src={polygon} className='poligon'/>
+    <img src={polygon} className='poligon' alt='polygon'/>
      <div className='containerDelete'>
         Apagar o Item?  
     <div className='containerChoise' onClick={deleteTransaction}>

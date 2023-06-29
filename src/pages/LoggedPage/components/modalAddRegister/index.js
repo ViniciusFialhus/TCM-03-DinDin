@@ -77,9 +77,8 @@ import { useRef, useState } from 'react'
                     const token = localStorage.getItem('token')
                     const headers = {headers: {Authorization: `Bearer ${token}` } }
                     const response = postTransition(transactionRegistrationForm, headers)
-                    console.log(transactionRegistrationForm)
                     response.then( (data) => {
-                        console.log(data);  
+                        window.location.reload()
                         setModalSetRegister(false)
                       })
                       .catch(error => {

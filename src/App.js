@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Register" element={<BodyFormRegistred title={'Cadastre-se'} />} />
-        {/* Verificação de autenticação antes de renderizar a rota LoggedPage */}
+    
         <Route
           path="/LoggedPage"
           element={verificarAutenticacao() ? <LoggedPage /> : <Navigate to="/" />}

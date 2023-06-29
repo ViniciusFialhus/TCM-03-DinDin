@@ -93,6 +93,26 @@ export async function getExtract(headers){
   }
 } 
 
+export async function getPerfil(headers){
+  try{
+    const getPerfil = await Api.get(`/usuario`, headers )
+
+    return getPerfil.data
+  } catch (error) { 
+    console.log(error)
+  }
+} 
+
+export async function updatedPerfil(data, headers ){
+  try{
+    const updatedPerfil= await Api.put(`/usuario`, data ,headers)
+
+    return updatedPerfil.data
+  } catch (error) { 
+    console.log(error)
+  }
+} 
+
 
 export default RegistredUser
 

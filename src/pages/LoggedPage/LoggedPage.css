@@ -36,17 +36,21 @@ header {
     height: 30px;
 }
 
-.containerLogout  .face{ 
+.containerPerfil{
+    cursor: pointer;
+}
+
+.containerLogout .containerPerfil .face{ 
     position: absolute;
-    right: 177px;
-    top: 20px;
+    right: 80px;
+    top: -20px;
     
 }
 
-.containerLogout .cicle{
+.containerLogout .containerPerfil .cicle{
     position: absolute;
-    top: 18px;
-    right:  170px;
+    right: 73px;
+    top: -22px;
     height: 40px;
 }
 
@@ -76,6 +80,7 @@ main{
     background-color: white;
 }
 
+
 .transactionPage{   
     display: flex;
     flex-direction: column;
@@ -100,18 +105,108 @@ main{
     border-radius: 10px;
 
     background-color: #FAFAFA;
+    cursor: pointer;
 
 }
 
 .filterIcon div {
     font-family: 'Lato';
     font-weight: bold;
+    
 }
 
 .filterIcon img {
     height: 15px;
     margin-right: 7px ;
 }
+
+.containerFilterCategory {
+    display: none;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    margin-left: 75px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    height: 150px;
+    width: 75%;
+    font-size: 13px;
+    font-family: 'Rubik';
+    
+  }
+  
+  .containerFilterCategory #filterCategory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 25px;
+    width: 130px;
+    margin: 2px;
+    padding-left: 5px;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+ .selected{
+    background-color: #7978D9;
+    color: white;
+ }
+
+  .plus {
+    margin-left: 10px;
+    align-self: center;
+  }
+
+  .containerSelectedFilter{
+    display: flex;
+    position: absolute;
+    top: 345px;
+    height: 30px;
+    width: 300px;
+    
+
+  }
+
+  .containerSelectedFilter .select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    width: 150px;
+    height: 100%;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    
+  }
+
+  .select:active{
+    background-color: #7978D9;
+    color: white;
+  }
+
+  .noSelect:active{
+    background-color: #7978D9;
+    color: white;
+  }
+
+  .containerSelectedFilter .noSelect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    cursor: pointer;    
+  }
+
+  
 
 .glossary{
     display: flex;
@@ -139,6 +234,7 @@ main{
     display: flex ;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
 }
 
@@ -146,6 +242,7 @@ main{
 {
     margin-top: 5px;
     margin-left: 3px;
+    height: 5px;
 }
 
 .line {
