@@ -1,70 +1,44 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Projeto de Trabalho de Conclusão de Módulo
 
-## Available Scripts
+Este repositório contém o terceiro trabalho de conclusão de modulo da escola de programação [Cubos Academy](https://cubos.academy || Site da Cubos Academy) esse projeto era cobrado para como requisito para a conclusão da disciplina de **React**.
 
-In the project directory, you can run:
+## Descrição do Projeto
 
-### `npm start`
+O objetivo principal deste projeto é replicar o layout e as funcionalidades de um website de um banco usando a biblioteca **React**. O projeto visava o aprimoramento dos alunos da Cubos Academy no ambiento de elaboração de sites dinâmicos e interativos, pratica com interações com Api's externas usando o **AXIOS**, interação com o **LocalStorage** e **SessionStorage** e a familizar aos alunos o uso dos hook's, prop's e ferramentas da biblioteca **React**. O desafio foi feito em duplas onde uma parte realizaria o front-end e a outra o back-end. Ele foi desenvolvido utilizando React e JS .
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Feature do Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Cadastro do usuário 
+- Login de usuário 
+- Deslogar usuário 
+- Cadastro de uma nova transação 
+- Edição de uma transação
+- Exclusão de uma transação 
+- Listagem de transações 
+- Resumo das transações 
+- Permitir ordenar a tabela por data 
+- Permitir o usuário filtrar a tabela por categoria 
+- Editar perfil de usuário
 
-### `npm test`
+## Paginas Principais
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O projeto possui as seguintes páginas principais:
 
-### `npm run build`
+![Login](https://github.com/ViniciusFialhus/TCM-03-DinDin/assets/117598534/dbb7ba07-dd22-4022-84be-e86177708293)
+![Home](https://github.com/ViniciusFialhus/TCM-03-DinDin/assets/117598534/749a05d2-5cb0-4d8b-8494-52e9ea6adeab)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para executar este projeto localmente, siga as etapas abaixo:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone este repositório para o seu ambiente local:
+    O comando ```https://github.com/ViniciusFialhus/TCM-03-DinDin.git``` deve ser executado.
+2. Rode o comando ```npm install``` para instalar as dependêcias
+3. Rode o comand ```npm start``` para iniciar a aplicação
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## LinkedIn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/viniciusfialhu/)
